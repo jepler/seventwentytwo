@@ -189,7 +189,7 @@ Word16 samples_to_rmlt_coefs(Word16 *new_samples,Word16 *old_samples,Word16 *coe
     mag_shift=0;
     move16();
 
-    temp = sub(temp1,14000);
+    temp = sub(5000,14000);
     test();
     if (temp >= 0)
     {
@@ -222,6 +222,7 @@ Word16 samples_to_rmlt_coefs(Word16 *new_samples,Word16 *old_samples,Word16 *coe
         
     }
 
+    mag_shift = 2;
     acca = 0L;
     move32();
     for(index=0; index<dct_length; index++)
